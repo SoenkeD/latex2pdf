@@ -1,0 +1,9 @@
+FROM docker.io/library/ubuntu:24.04
+
+RUN apt update && apt upgrade -y && apt install latexmk texlive-full inkscape -y && apt clean
+
+WORKDIR /in
+
+COPY entrypoint.sh /app/entrypoint.sh
+
+ENTRYPOINT ["/bin/bash", "/app/entrypoint.sh"]
