@@ -2,7 +2,7 @@
 This repository contains the basic setup to create PDF files from Latex source. 
 
 Copy this into a new repository:
-`git archive --remote=git@github.com:SoenkeD/latex2pdf.git HEAD | tar -x -C .`
+`curl -sL https://github.com/SoenkeD/latex2pdf/archive/refs/heads/main.tar.gz | tar -xzf - --strip-components=1 -C .`
 
 ## Make it your own
 - change PDF name `PDF_NAME?=root.pdf`
